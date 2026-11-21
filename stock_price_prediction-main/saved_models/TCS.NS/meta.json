@@ -1,0 +1,157 @@
+{
+  "ticker": "TCS.NS",
+  "period": "10y",
+  "seed": 42,
+  "trained_at": "2026-11-21T18:21:38",
+  "train_time_sec": 86.2,
+  "n_rows": 2440,
+  "features": [
+    "Return",
+    "MA10",
+    "MA20",
+    "Volatility",
+    "RSI",
+    "MACD",
+    "MACD_signal",
+    "BB_high",
+    "BB_low",
+    "Momentum",
+    "Lag1",
+    "Lag2",
+    "Lag3",
+    "Excess_Return",
+    "Mkt_Vol",
+    "VIX"
+  ],
+  "window": 30,
+  "split": {
+    "train_end": 1708,
+    "val_end": 2074,
+    "train_until": "2023-12-04",
+    "val_until": "2025-05-30",
+    "test_from": "2025-06-02"
+  },
+  "data_range": {
+    "start": "2017-01-05",
+    "end": "2026-11-20"
+  },
+  "ensemble_weights": {
+    "xgb": 0.27912070669157235,
+    "lstm": 0.3602149667645871,
+    "gru": 0.36066432654384056
+  },
+  "metrics": {
+    "xgb_1d": {
+      "return": {
+        "rmse": 0.019352057485657485,
+        "mae": 0.014561580160205425,
+        "directional_accuracy": 44.38356164383562,
+        "naive_rmse": 0.01688547004614506,
+        "skill_score": -0.14607751118397472,
+        "n_samples": 365
+      },
+      "price": {
+        "rmse": 49.60572964257285,
+        "mae": 37.82067288897975,
+        "mape": 1.4624655625715974,
+        "r2": 0.9834841794142718,
+        "directional_accuracy": 44.352617079889804,
+        "naive_rmse": 42.73561441720186,
+        "naive_directional_accuracy": 0.27548209366391185,
+        "skill_score": -0.1607585457483358,
+        "n_samples": 364
+      }
+    },
+    "xgb_5d": {
+      "return": {
+        "rmse": 0.04375709673641266,
+        "mae": 0.03412473037298749,
+        "directional_accuracy": 47.091412742382275,
+        "naive_rmse": 0.038207523076454857,
+        "skill_score": -0.14524819232204278,
+        "n_samples": 361
+      }
+    },
+    "xgb_21d": {
+      "return": {
+        "rmse": 0.10070402557353378,
+        "mae": 0.0808851130071523,
+        "directional_accuracy": 48.69565217391305,
+        "naive_rmse": 0.08784190046885247,
+        "skill_score": -0.14642357503685877,
+        "n_samples": 345
+      }
+    },
+    "direction": {
+      "accuracy": 46.7032967032967,
+      "base_rate": 55.769230769230774,
+      "n_samples": 364
+    },
+    "lstm": {
+      "price": {
+        "rmse": 42.7210471269106,
+        "mae": 30.561006817494977,
+        "mape": 1.189797349120507,
+        "r2": 0.9877864136501364,
+        "directional_accuracy": 50.27472527472527,
+        "naive_rmse": 42.733826895805656,
+        "naive_directional_accuracy": 0.27472527472527475,
+        "skill_score": 0.00029905510045280526,
+        "n_samples": 365
+      }
+    },
+    "gru": {
+      "price": {
+        "rmse": 42.69504673726748,
+        "mae": 30.617868791796983,
+        "mape": 1.19208803822364,
+        "r2": 0.9878012757095261,
+        "directional_accuracy": 51.373626373626365,
+        "naive_rmse": 42.733826895805656,
+        "naive_directional_accuracy": 0.27472527472527475,
+        "skill_score": 0.0009074815282218429,
+        "n_samples": 365
+      }
+    },
+    "val_rmse": {
+      "xgb": 65.3136,
+      "lstm": 50.6098,
+      "gru": 50.5467
+    },
+    "ensemble": {
+      "price": {
+        "rmse": 43.150829786529485,
+        "mae": 31.55144072826724,
+        "mape": 1.2283471311287746,
+        "r2": 0.987502740852571,
+        "directional_accuracy": 47.38292011019284,
+        "naive_rmse": 42.73561441720186,
+        "naive_directional_accuracy": 0.27548209366391185,
+        "skill_score": -0.009715909669020473,
+        "n_samples": 364
+      }
+    }
+  },
+  "feature_importance": {
+    "Return": 4.715,
+    "MA10": 4.436,
+    "MA20": 4.922,
+    "Volatility": 5.689,
+    "RSI": 5.989,
+    "MACD": 6.19,
+    "MACD_signal": 7.18,
+    "BB_high": 7.379,
+    "BB_low": 7.567,
+    "Momentum": 7.0,
+    "Lag1": 6.829,
+    "Lag2": 5.555,
+    "Lag3": 6.395,
+    "Excess_Return": 5.467,
+    "Mkt_Vol": 7.143,
+    "VIX": 7.545
+  },
+  "direction_classes": [
+    "DOWN",
+    "UP"
+  ]
+}
